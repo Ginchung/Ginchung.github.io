@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head>
+<body style="height: 100%; margin: 0">
+    <div id="container" style="height: 85%; -webkit-tap-highlight-color: transparent; user-select: none; position: relative;" _echarts_instance_="ec_1537937056290">
+    <div style="position: relative; overflow: hidden; width: 1920px; height: 925px; padding: 0px; margin: 0px; border-width: 0px; cursor: pointer;">
+    <canvas data-zr-dom-id="zr_0" width="1920" height="925" style="position: absolute; left: 0px; top: 0px; width: 1920px; height: 925px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;">
+    </canvas>
+    </div>
+    </div>
+    <script type="text/javascript" src="./echartjs/echarts.min.js"></script>
+    <script type="text/javascript" src="./echartjs/echarts-gl.min.js"></script>
+    <script type="text/javascript" src="./echartjs/ecStat.min.js"></script>
+    <script type="text/javascript" src="./echartjs/dataTool.min.js"></script>
+    <script type="text/javascript" src="./echartjs/china.js"></script>
+    <script type="text/javascript" src="./echartjs/world.js"></script>
+    <script type="text/javascript" src="./echartjs/api.js"></script>
+    <!--<script type="text/javascript" src="/getscript"></script>-->
+    <script type="text/javascript" src="./echartjs/bmap.min.js"></script>
+    <script type="text/javascript" src="./echartjs/simplex.js"></script>
+    <script type="text/javascript">
+        var dom = document.getElementById("container");
+        var myChart = echarts.init(dom);
+        var app = {};
+        option = null;
+        app.title = 'Times for var in SISSO.out';
+        
+        var Vars = ['Z','oZ','Ediss','kaP','oKaP','kaMB','okaMB','IE1','oIE1','IE2','oIE2','EA','oEA','HOMO','oHOMO','LUMO','oLUMO','fermi','ofermi','Zrs','oZrs','Zrp','oZrp','Wrs','oWrs','Wrp','oWrp','Nval','oNval'];
+        var Surface_and_Species = ['CH 111','CH 211','CH2 111','CH2 211','CH3 111','CH3 211','CH4 111','CH4 211','H2O 111','H2O 211','NH2 111','NH2 211','NH3 111','NH3 211','OH 111','OH 211'];
+        
+        var data = [[5, 0, 3], [6, 0, 2], [19, 0, 4], [7, 0, 2], [9, 0, 5], [3, 0, 3], [17, 0, 1], [23, 0, 1], [12, 0, 1], [0, 0, 6], [9, 1, 1], [7, 1, 1], [2, 1, 5], [15, 1, 4], [3, 1, 2], [27, 1, 4], [12, 1, 1], [0, 1, 1], [5, 2, 1], [24, 2, 1], [19, 2, 1], [21, 2, 1], [7, 2, 5], [8, 2, 1], [15, 2, 2], [3, 2, 5], [2, 2, 3], [0, 2, 2], [5, 3, 2], [19, 3, 2], [16, 3, 1], [7, 3, 2], [9, 3, 1], [21, 3, 2], [14, 3, 1], [15, 3, 4], [3, 3, 2], [23, 3, 2], [2, 3, 3], [0, 3, 2], [21, 4, 2], [7, 4, 3], [2, 4, 3], [3, 4, 3], [17, 4, 2], [1, 4, 3], [27, 4, 3], [12, 4, 1], [0, 4, 2], [13, 4, 1], [7, 5, 1], [21, 5, 3], [3, 5, 1], [9, 5, 4], [13, 5, 1], [17, 5, 1], [23, 5, 2], [25, 5, 2], [2, 5, 3], [12, 5, 3], [0, 5, 3], [16, 5, 3], [26, 6, 1], [5, 6, 4], [24, 6, 2], [7, 6, 1], [9, 6, 1], [11, 6, 1], [14, 6, 1], [3, 6, 3], [25, 6, 2], [2, 6, 4], [27, 6, 2], [5, 7, 1], [16, 7, 1], [7, 7, 3], [18, 7, 1], [11, 7, 1], [15, 7, 1], [3, 7, 4], [25, 7, 3], [2, 7, 5], [12, 7, 2], [5, 8, 3], [19, 8, 1], [21, 8, 1], [7, 8, 1], [9, 8, 2], [11, 8, 4], [10, 8, 1], [8, 8, 1], [15, 8, 3], [3, 8, 1], [2, 8, 4], [0, 8, 2], [28, 8, 1], [5, 9, 3], [19, 9, 1], [16, 9, 1], [7, 9, 2], [9, 9, 3], [11, 9, 1], [3, 9, 4], [27, 9, 1], [25, 9, 1], [2, 9, 3], [12, 9, 1], [0, 9, 1], [13, 9, 1], [26, 10, 1], [5, 10, 3], [19, 10, 4], [7, 10, 2], [11, 10, 1], [8, 10, 1], [22, 10, 2], [17, 10, 1], [1, 10, 2], [25, 10, 2], [2, 10, 4], [0, 10, 2], [5, 11, 5], [19, 11, 1], [7, 11, 4], [18, 11, 1], [9, 11, 3], [11, 11, 2], [3, 11, 2], [25, 11, 1], [2, 11, 3], [12, 11, 1], [0, 11, 1], [5, 12, 2], [16, 12, 1], [7, 12, 1], [9, 12, 1], [11, 12, 2], [20, 12, 1], [3, 12, 4], [17, 12, 1], [1, 12, 1], [27, 12, 2], [12, 12, 1], [6, 12, 3], [28, 12, 1], [23, 12, 2], [5, 13, 3], [16, 13, 2], [9, 13, 2], [11, 13, 3], [10, 13, 1], [15, 13, 1], [3, 13, 2], [23, 13, 2], [2, 13, 3], [6, 13, 1], [5, 14, 3], [7, 14, 3], [15, 14, 2], [3, 14, 3], [2, 14, 6], [6, 14, 1], [24, 15, 1], [7, 15, 2], [2, 15, 4], [15, 15, 4], [20, 15, 2], [3, 15, 2], [1, 15, 2], [27, 15, 2], [28, 15, 1], [23, 15, 2]];
+        
+        data = data.map(function (item) {
+            return [item[1], item[0], item[2] || '-'];
+        });
+        
+        option = {
+            tooltip: {
+                position: 'top'
+            },
+            animation: false,
+            grid: {
+                height: '80%',
+                y: '5%'
+            },
+            xAxis: {
+                type: 'category',
+                data: Surface_and_Species,
+                splitArea: {
+                    show: true
+                }
+            },
+            yAxis: {
+                type: 'category',
+                data: Vars,
+                splitArea: {
+                    show: true
+                }
+            },
+            visualMap: {
+                min: 0,
+                max: 6,
+                calculable: true,
+                orient: 'horizontal',
+                left: 'center',
+                bottom: '5%'
+            },
+            series: [{
+                name: 'Punch Card',
+                type: 'heatmap',
+                data: data,
+                label: {
+                    normal: {
+                        show: true
+                    }
+                },
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }]
+        };;
+        if (option && typeof option === "object") {
+            myChart.setOption(option, true);
+        }
+    </script>
+
+    <div id="footer" style="background-color:rgba(226,166,132,1);color:white;clear:both;text-align:center;padding:5px;">
+    Page shown using <a href="http://www.echartjs.com/">ECharts</a>; Author: <a href="https://github.com/ginchung">Ginchung</a>, edited on Sept 26, 2018. 
+    </div>
+
+   
+</body></html>
