@@ -31,6 +31,7 @@ For example, we can edit the `SISSO.in` file as below:
 Line 6:
 
     desc_dim=2           ! dimension of the descriptor (<=3 for 'quali')
+
 Line 25:
 
     subs_sis=10000         ! SIS-selected (single) subspace size
@@ -42,6 +43,8 @@ Now if I want to make the running time ~ 300.00s. Then change the formula to:
 <img src="https://www.zhihu.com/equation?tex={(\frac{time_{cost}}{time_0})}^{1/dimension}size_0=size_{needed}" />
 
 <img src="https://www.zhihu.com/equation?tex=size_{needed}=(\frac{300}{27.08})^{1/2}\times{10000}\approx{33284}" />
+
+So we set the subspace size to 33284, and what is the result?
 
 After SISSO program computation, time cost is **295.78s**. Really accurate, especially in high-time-cost performing. 
 
