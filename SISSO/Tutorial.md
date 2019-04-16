@@ -3,9 +3,17 @@ enable html: true
 ---
 # Brief SISSO Tutorial
 
-This page aims to make [SISSO](https://github.com/rouyang2017/SISSO) users a brief view, as well as give some tricks after using it. 
+[SISSO](https://github.com/rouyang2017/SISSO) is a newly developed Machine Learning Program based on Fortran. This page aims to make SISSO users a brief view, as well as give some tricks after using it. 
 
-For a detailed compiling guide, please visit the SISSO original repo.  
+- [About](#about)
+ - [License](#license)
+ - [Principle](#principle)
+ - [How to contribute](#how-to-contribute)
+- [Time Estimation](#time-estimate)
+
+## About
+
+### License
 
 ```
 License: 
@@ -15,7 +23,15 @@ Figure our page will make SISSO tutorial more comprehensive.
 With your help, We can make machine learning better. 
 ```
 
-## Time to spend
+### Principle
+
+Since the SISSO original page provides compiling infomation, we focus on the skills when using it, which include but not limited to, **Usual mistake of new hand**, **python scripts to accelerate analysis**. 
+
+### How to contribute
+
+Fork-Edit-Pull Request **OR** [Issue](https://github.com/Ginchung/ginchung.github.io/issues) here. 
+
+## Time estimation
 
 Time Formula as below:
 
